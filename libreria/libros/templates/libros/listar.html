@@ -1,0 +1,19 @@
+{% extends "base_template.html" %}
+{% load static %}
+
+
+{% block headers %}
+<link rel="stylesheet" href="{% static 'css/listar.css' %}">
+<title>Libros</title>
+{% endblock %}
+
+{% block content %}
+<div class="container lista">
+    <ul class="list-group">
+        {% for al in lista %}
+        <li class="list-group-item">{{ al.name }}</li>
+        {% endfor %}
+    </ul>    
+</div>
+
+{% endblock %}
